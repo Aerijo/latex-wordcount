@@ -5,8 +5,8 @@ See this on [atom.io](https://atom.io/packages/latex-wordcount)
 ## Table of contents
 - [About](#about)
 - [Commands](#commands)
-  - [Document wordcount](#document wordcount)
-  - [Document wordcount (more accurate)](#docment wordcount (more accurate))
+  - [Document wordcount](#document-wordcount)
+  - [Document wordcount (more accurate)](#document-wordcount-more-accurate)
 
 
 ## About
