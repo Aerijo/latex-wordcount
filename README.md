@@ -34,12 +34,12 @@ However, it makes no distinction between the type of any text. Tables, captions,
 
 
 ## Ideas
-[X] Word count for entire document; i.e., what results from compiling
+- [X] Word count for entire document; i.e., what results from compiling
 
-[ ] Word count for selected region (less accurate compared to wordcount.tex, as macro definitions are completely unknown)
+- [ ] Word count for selected region (less accurate compared to wordcount.tex, as macro definitions are completely unknown)
 
-[ ] Word count for current file (it might be an individual section or chapter)
+- [ ] Word count for current file (it might be an individual section or chapter)
 
-[ ] Wordcout for current section (where cursor is up until next `\section{}` command); same type for `\subsection{}`, `\subsubsection{}`. If not finished by current file, ~~can check the input~~ cannot check input, as completely ambiguous. Not being finished in file should result in warning.
+- [ ] Wordcout for current section (where cursor is up until next `\section{}` command); same type for `\subsection{}`, `\subsubsection{}`. If not finished by current file, ~~can check the input~~ cannot check input, as completely ambiguous. Not being finished in file should result in warning.
 
   - Config file could be used for custom section commands and their 'level'; section goes from current section (by looking above) to next section command of same or greater level.
