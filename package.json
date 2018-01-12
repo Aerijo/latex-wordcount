@@ -1,7 +1,7 @@
 {
   "name": "latex-wordcount",
   "main": "./lib/latex-wordcount",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Estimate the wordcount of your LaTeX document",
   "keywords": [
     "latex",
