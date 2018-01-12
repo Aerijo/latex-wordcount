@@ -14,6 +14,8 @@ Given the nature of LaTeX, it is practically impossible to get an accurate word 
 
 - **NOTE:** The more accurate wordcount does not work on files with spaces in the path. E.g., `/Users/username/my TeX files/main.tex` will not work. It also (probably) doesn't work on Windows (yet).
 
+- **Windows:** TeXcount may need to be set up following the instructions [given here](http://app.uio.no/ifi/texcount/faq.html). `wordcount.tex` does not work at all yet.
+
 ## Commands
 Currently, this package offers two commands. More are being worked on (see [Ideas](#ideas)).
 
