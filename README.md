@@ -6,6 +6,7 @@ See this on [atom.io](https://atom.io/packages/latex-wordcount)
 - [About](#about)
 - [Commands](#commands)
   - [Document wordcount](#document-wordcount)
+  - [Selection wordcount](#selection-wordcount)
   - [Document wordcount (more accurate)](#document-wordcount-more-accurate)
 
 
@@ -22,6 +23,11 @@ Currently, this package offers two commands. More are being worked on (see [Idea
 #### Document wordcount
 This will count using `TeXcount`, which uses a set of LaTeX specific rules to better estimate the word count. It's quite fast, as it does not compile the document, so useful if you want a rough estimate of the word count. Note that it will not know any macro definitions, so take this into consideration if you use macros that expand into a group of words. It will probably underestimate the word count in most cases. See it's homepage [here](http://app.uio.no/ifi/texcount/).
 
+#### Selection wordcount
+This one also uses `TeXcount`, so the same caveats apply as above. Specifically, this command will create a temporary file in the system temp directory using the and write the selected text to it. It will then run `texcount` on this temporary file, specifying the directory as that of the original file. This way, and `\input` statements (and others) will still work if they are completely within the selection. TeXcount will not see the outside of the selection, so if the selection cuts into a macro it may not behave as expected.
+
+The temporary file is deleted as soon as the results are returned.
+
 #### Document wordcount (more accurate)
 _Forgive the name._ (this does not work on files with spaces in the path; see top note)
 
@@ -36,7 +42,7 @@ However, it makes no distinction between the type of any text. Tables, captions,
 ## Ideas
 - [X] Word count for entire document; i.e., what results from compiling
 
-- [ ] Word count for selected region (less accurate compared to wordcount.tex, as macro definitions are completely unknown)
+- [X] Word count for selected region (less accurate compared to wordcount.tex, as macro definitions are completely unknown)
 
 - [ ] Word count for current file (it might be an individual section or chapter)
 
