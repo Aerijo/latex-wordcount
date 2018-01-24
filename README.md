@@ -4,6 +4,7 @@ See this on [atom.io](https://atom.io/packages/latex-wordcount)
 
 ## Table of contents
 - [About](#about)
+- [Requirements](#requirements)
 - [Commands](#commands)
   - [Quick summary](#quick-summary)
   - [Document wordcount](#document-wordcount)
@@ -17,13 +18,16 @@ See this on [atom.io](https://atom.io/packages/latex-wordcount)
 
 
 ## About
-Given the nature of LaTeX, it is practically impossible to get an accurate word count for any non-trivial document. However, this package provides several methods of estimating the word count using tools that come with a TeXLive distribution, such as [`TeXcount`](http://app.uio.no/ifi/texcount/) and [`wordcount.tex`](https://ctan.org/pkg/wordcount).
+Given the nature of LaTeX, it is practically impossible to get an accurate word count for any non-trivial document. However, this package provides several methods of estimating the word count using tools that come with a TeX Live distribution, such as [`TeXcount`](http://app.uio.no/ifi/texcount/) and [`wordcount.tex`](https://ctan.org/pkg/wordcount).
 
 Most of the provided commands use `TeXcount`, as it is the quicker and more lenient program. However, it is likely to underestimate the wordcount most of the time. The one command that uses `wordcount.tex` only works on the entire document and requires generating a log file that grows larger as the document gets longer. This one will likely overestimate the word count, so (to reiterate the earlier point) these methods are approximations only and you as the user must decide how to interpret the results.
 
-- **NOTE:** The more accurate wordcount does not work on files with spaces in the path. E.g., `/Users/username/my TeX files/main.tex` will not work. It also (probably) doesn't work on Windows (yet).
+## Requirements
+- Most commands need the `texcount` command line program. This comes with a standard TeX Live installation. I believe it also comes with MiKTeX, but cannot confirm.
+  - Windows: TeXcount may need to be set up following the instructions [given here](http://app.uio.no/ifi/texcount/faq.html).
+- The `Document wordcount (more accurate)` command only works on a UNIX shell, as it currently uses commands such as `echo` and `grep`. Most Windows users will be unable to use this command for now.
+- The above command also requires that the absolute path to the root file has no spaces in it. E.g., `/Users/username/my TeX files/main.tex` will not work.
 
-- **Windows:** TeXcount may need to be set up following the instructions [given here](http://app.uio.no/ifi/texcount/faq.html). `wordcount.tex` does not work at all yet.
 
 ## Commands
 #### Quick summary
