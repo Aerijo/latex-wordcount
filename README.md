@@ -18,7 +18,7 @@ Given the nature of LaTeX, it is practically impossible to get an accurate word 
 - **Windows:** TeXcount may need to be set up following the instructions [given here](http://app.uio.no/ifi/texcount/faq.html). `wordcount.tex` does not work at all yet.
 
 ## Commands
-Currently, this package offers two commands. More are being worked on (see [Ideas](#ideas)).
+Currently, this package offers three commands. More are being worked on (see [Ideas](#ideas)).
 
 #### Document wordcount
 This will count using `TeXcount`, which uses a set of LaTeX specific rules to better estimate the word count. It's quite fast, as it does not compile the document, so useful if you want a rough estimate of the word count. Note that it will not know any macro definitions, so take this into consideration if you use macros that expand into a group of words. It will probably underestimate the word count in most cases. See it's homepage [here](http://app.uio.no/ifi/texcount/).
