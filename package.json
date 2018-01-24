@@ -22,5 +22,9 @@
   ],
   "activationCommands": {
     "atom-workspace": "latex-wordcount:document-wordcount"
+  },
+  "dependencies": {
+    "tmp": "^0.0.33",
+    "fs-plus": "^3.0.0"
   }
 }
