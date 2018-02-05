@@ -22,6 +22,8 @@ Given the nature of LaTeX, it is practically impossible to get an accurate word 
 
 Most of the provided commands use `TeXcount`, as it is the quicker and more lenient program. However, it is likely to underestimate the wordcount most of the time. The one command that uses `wordcount.tex` only works on the entire document and requires generating a log file that grows larger as the document gets longer. This one will likely overestimate the word count, so (to reiterate the earlier point) these methods are approximations only and you as the user must decide how to interpret the results.
 
+- Note: I recently added code folding based on section commands. This is experimental, must be explicitly enabled to use, and will likely be removed at some point. For now though, I'll leave it here because this package already has section range finding logic, so implementing folding based on this range was easy enough.
+
 ## Requirements
 - Most commands need the `texcount` command line program. This comes with a standard TeX Live installation. I believe it also comes with MiKTeX, but cannot confirm.
   - Windows: TeXcount may need to be set up following the instructions [given here](http://app.uio.no/ifi/texcount/faq.html).
