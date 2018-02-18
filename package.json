@@ -20,11 +20,9 @@
     "language-latex:grammar-used",
     "language-latex2e:grammar-used"
   ],
-  "activationCommands": {
-    "atom-workspace": "latex-wordcount:document-wordcount"
-  },
   "dependencies": {
     "fs-plus": "^3.0.0",
-    "tmp": "^0.0.33"
+    "tmp": "^0.0.33",
+    "first-mate": "^7.1.0"
   }
 }
